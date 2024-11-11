@@ -542,9 +542,6 @@ body {
 
 
 
-
-
-
 #categories{
   display: flex;
   position: absolute;
@@ -605,4 +602,16 @@ body {
 
 input.quantity-input{
   color: #000000;
+}
+
+#chartContainer{
+  position: relative;
+  top: 0px;
+  right: 100px;
+  height: 100%;
+}
+#levelRange{
+  position: relative;
+  left: 250px;
+  bottom: 200px;
 }

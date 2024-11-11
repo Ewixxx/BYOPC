@@ -111,7 +111,7 @@ $favorites_items = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
                     ?>
                             <li>
                                 <?= htmlspecialchars($item['name']) ?> - ₱<?= number_format($item['price'], 2) ?> x
-                                <input type="number" class="quantity-input" data-cart-item-id="<?= $item['cart_item_id'] ?>" value="<?= $item['quantity'] ?>" min="0" style="width: 50px;">
+                                <input type="number" class="quantity-input" data-cart-item-id="<?= $item['cart_item_id'] ?>" value="<?= $item['quantity'] ?>" min="0" style="width: 30px;">
                             </li>
                         <?php endforeach; ?>
                     <?php else: ?>

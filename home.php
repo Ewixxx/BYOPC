@@ -20,7 +20,7 @@ $products = $conn->query($query)->fetch_all(MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>RigMasters</title>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -109,8 +109,9 @@ $products = $conn->query($query)->fetch_all(MYSQLI_ASSOC);
                     ?>
                             <li>
                                 <?= htmlspecialchars($item['name']) ?> - ₱<?= number_format($item['price'], 2) ?> x
-                                <input type="number" class="quantity-input" data-cart-item-id="<?= $item['cart_item_id'] ?>" value="<?= $item['quantity'] ?>" min="0" style="width: 50px;">
+                                <input type="number" class="quantity-input" data-cart-item-id="<?= $item['cart_item_id'] ?>" value="<?= $item['quantity'] ?>" min="0" style="width: 30px;">
                             </li>
+                            
                         <?php endforeach; ?>
                     <?php else: ?>
                         <center>

@@ -73,6 +73,10 @@ $cart_count = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css?v=<?php echo filemtime('styles.css'); ?>">
     <script src="script.js?v=<?php echo filemtime('script.js'); ?>"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
 </head>
 <style>
     body {
@@ -160,7 +164,7 @@ $cart_count = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'
                         ?>
                                 <li>
                                     <?= htmlspecialchars($item['name']) ?> - ₱<?= number_format($item['price'], 2) ?> x
-                                    <input type="number" class="quantity-input" data-cart-item-id="<?= $item['cart_item_id'] ?>" value="<?= $item['quantity'] ?>" min="0" style="width: 50px;">
+                                    <input type="number" class="quantity-input" data-cart-item-id="<?= $item['cart_item_id'] ?>" value="<?= $item['quantity'] ?>" min="0" style="width: 30px;">
                                 </li>
                             <?php endforeach; ?>
                         <?php else: ?>
